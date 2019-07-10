@@ -3,7 +3,6 @@ $(document).ready(function() {
   let id;
   let user, hydration, sleep, activity;
   const date = new Date().toISOString().replace('-', '/').split('T')[0].replace('-', '/');
-  console.log(date)
   const userRepo = new UserRepo(userData);
   const hydrationRepo = new HydrationRepo(hydrationData);
   const sleepRepo = new SleepRepo(sleepData, userData);
@@ -51,7 +50,6 @@ function processUserForms() {
       $('.coach').show();
       $('.date').text(date);
       $('nav').hide();
-      appendAverageStepGoals();
       appendUsersSleepQualityAvg();
       appendUsersWithSleepQuality3PlusForWeek();
       appendLongestSleeperGivenDate();
