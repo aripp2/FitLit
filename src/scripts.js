@@ -59,7 +59,6 @@ function processUserForms() {
     appendAverageStepGoals();
   }
 
-
   function appendHydration() {
     appendTodayWater();
   }
@@ -245,4 +244,4 @@ const weeklySleepQualityChart = new Chart($('#chart--weekSleepQuality'), {
     })
 });
 
-}); //DOC.ready closing line
+});
