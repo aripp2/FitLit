@@ -32,7 +32,6 @@ describe('Activity', () => {
 
   it('should return the miles walked for a given user and day', () => {
     const miles = activity.returnMilesWalkedForDate("2019/06/23");
-    console.log('miles', miles)
     expect(miles).to.equal(8.52);
   });
 
@@ -53,7 +52,6 @@ describe('Activity', () => {
 
   it('should return all days user exceeds their step goal', () => {
     const daysStepGoalExceeded = activity.daysStepGoalExceeded();
-    console.log('days', daysStepGoalExceeded)
     expect(daysStepGoalExceeded).to.equal(5);
   });
 
