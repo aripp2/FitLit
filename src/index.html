@@ -9,20 +9,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <h1>FitLit</h1>
-    <h2>Welcome <span class="user--firstName"></span>!</h2>
-    <h2>Your User ID: <span class="user--id"></span></h2>
-    <h2>Name: <span class="user--name"></span></h2>
-    <h2>Address: <span class="user--address"></span></h2>
-    <h2>Email: <span class="user--email"></span></h2>
-    <h2>Stride Length: <span class="user--strideLength"></span></h2>
-    <h2>Daily Step Goal: <span class="user--dailyStepGoal"></span></h2>
-    <h2>Friends: <span class="user--friends"></span></h2>
-    <h2>All user's step goal average <span class="users--stepAverage"></span></h2>
-    <h2>Your Water Consumed Today: <span class="user--todayWater"></span></h2>
+    <header></header>
+    <div>
+      <h1>Welcome!</h1>
+      <h2>Please select your role:</h2>
+      <form class="form--role">
+        <select>
+          <option value="" disabled selected hidden>Choose an Option...</option>
+          <option class="form--role" value="1">Coach</option>
+          <option class="form--role" value="2">Athlete</option>
+        </select>
+      </form>
+      <h2>Please select your name:</h2>
+      <form class="form--coachName">
+        <select>
+          <option disabled selected hidden>Choose a Coach...</option>
+          <option value="1">Coach Brittany</option>
+          <option value="2">Coach Robbie</option>
+        </select>
+      </form>
+      <form class="form--athleteName">
+        <select class="form--athleteNameSelector">
+          <option disabled selected hidden>Choose an Athlete...</option>
+        </select>
+      </form>
+      <button class="form--submit" type="button">Submit</button>
+    </div>
+    <h1 class="hide">FitLit</h1>
+    <h2 class="hide">Welcome <span class="user--firstName"></span>!</h2>
+    <h2 class="hide">Your User ID: <span class="user--id"></span></h2>
+    <h2 class="hide">Name: <span class="user--name"></span></h2>
+    <h2 class="hide">Address: <span class="user--address"></span></h2>
+    <h2 class="hide">Email: <span class="user--email"></span></h2>
+    <h2 class="hide">Stride Length: <span class="user--strideLength"></span></h2>
+    <h2 class="hide">Daily Step Goal: <span class="user--dailyStepGoal"></span></h2>
+    <h2 class="hide">Friends: <span class="user--friends"></span></h2>
+    <h2 class="hide">All user's step goal average <span class="users--stepAverage"></span></h2>
+    <h2 class="hide">Your Water Consumed Today: <span class="user--todayWater"></span></h2>
     <figure class="test">
       <canvas id="chart--weekHydration" height="400px" width="400px"></canvas>
     </figure>
+    <footer></footer>
     
 
 
