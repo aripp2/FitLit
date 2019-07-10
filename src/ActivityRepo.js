@@ -63,12 +63,13 @@ class ActivityRepo {
 
   returnFriendsWeeklyStepWinner(date, selectedUser) {
     let stepChallenge = this.returnFriendsWeeklyStepData(date, selectedUser);
-    return stepChallenge.reduce((acc, challenger) => {
+    let winner = stepChallenge.reduce((acc, challenger) => {
       if (challenger.y > acc.y) {
         acc = challenger;
       }
       return acc;
     });
+    return `${winner.x} with ${winner.y} steps!`
   }
 
   returnFriendsWeeklyMinutesData(date, selectedUser) {
@@ -96,12 +97,13 @@ class ActivityRepo {
 
   returnFriendsWeeklyMinutesWinner(date, selectedUser) {
     let stepChallenge = this.returnFriendsWeeklyMinutesData(date, selectedUser);
-    return stepChallenge.reduce((acc, challenger) => {
+    let winner = stepChallenge.reduce((acc, challenger) => {
       if (challenger.y > acc.y) {
         acc = challenger;
       }
       return acc;
     });
+    return `${winner.x} with ${winner.y} minutes active!`
   }
 
 }

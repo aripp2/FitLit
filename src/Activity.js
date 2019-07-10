@@ -60,7 +60,7 @@ class Activity {
 
   returnStepStreaks() {
     let streak = [];
-    return this.userData.reduce((acc, record, index, array) => {
+    let streaks = this.userData.reduce((acc, record, index, array) => {
       if (streak.length === 0) {
         streak.push(record.date);
       } else if (index > 0 && record.numSteps > array[index -1].numSteps) {
@@ -73,6 +73,7 @@ class Activity {
       }
       return acc;
     }, []);
+    return `You had a ${streaks[0].length} day streak of increasing steps on ${streaks[0]}`
   }
 
 }

@@ -58,8 +58,9 @@ describe('ActivityRepo', () => {
   });
 
   it('should declare the friends step challenge winner\'s name', () => {
-    const name = activityRepo.returnFriendsWeeklyStepWinner("2019/06/23", user);
-    expect(name.x).to.equal('Jarvis Considine')
+    const winner = activityRepo.returnFriendsWeeklyStepWinner("2019/06/23", user);
+    // console.log('name', name)
+    expect(winner).to.equal('Jarvis Considine with 46000 steps!');
   });
 
   it('should return each friend\'s weekly total minutes active', () => {
@@ -69,8 +70,8 @@ describe('ActivityRepo', () => {
   });
 
   it('should declare the friends minutes active challenge winner\'s name', () => {
-    const name = activityRepo.returnFriendsWeeklyMinutesWinner("2019/06/23", user);
-    expect(name.x).to.equal('Jarvis Considine')
+    const winner = activityRepo.returnFriendsWeeklyMinutesWinner("2019/06/23", user);
+    expect(winner).to.equal('Jarvis Considine with 1100 minutes active!')
   });
 
 })

@@ -47,7 +47,6 @@ function processUserForms() {
     hydration = new Hydration(hydrationRepo.returnUserData(id));
     sleep = new Sleep(sleepRepo.returnUserData(id));
     activity = new Activity(activityRepo.returnUserActivityData(id), userRepo.returnUserData(id));
-    console.log('activity', activity)
     
   appendUser();
   appendHydration();
@@ -81,10 +80,13 @@ function processUserForms() {
    appendUserAvgMinActiveWeek();
    appendWasStepGoalAchievedDate();
    appendUserDaysStepGoalExceeded();
+   appendUserStepStreak();
    appendUserStairClimbRecord();
    appendUsersAvgStairsDate();
    appendUsersAvgStepsDate();
    appendUsersAvgMinActiveDate();
+   appendFriendsStepChallenge();
+   appendFriendsMinActiveChallenge();
   }
 
   function appendFirstName() {
@@ -162,9 +164,21 @@ function processUserForms() {
     $('.user--daysStepGoalExceeded').text(activity.daysStepGoalExceeded());
   }
 
+  function appendUserStepStreak() {
+    $('.user--stepStreak').text(activity.returnStepStreaks());
+  }
+
   function appendUserStairClimbRecord() {
     $('.user--stairClimbRecord').text(activity.stairClimbingRecord());
   }
+
+  function appendFriendsStepChallenge() {
+    $('.user--friendsStepChallenge').text(activityRepo.returnFriendsWeeklyStepWinner(date, user.userData));
+  };
+
+  function appendFriendsMinActiveChallenge() {
+    $('.user--friendsMinActiveChallenge').text(activityRepo.returnFriendsWeeklyMinutesWinner(date, user.userData));
+  };
 
   function appendUsersAvgStairsDate() {
     $('.users--stairAvgDate').text(activityRepo.avgNumStairsClimbedGivenDate(date));
