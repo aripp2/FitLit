@@ -94,7 +94,7 @@ class ActivityRepo {
       return acc;
     }, []);
   }
-
+  
   returnFriendsWeeklyMinutesWinner(date, selectedUser) {
     let stepChallenge = this.returnFriendsWeeklyMinutesData(date, selectedUser);
     let winner = stepChallenge.reduce((acc, challenger) => {

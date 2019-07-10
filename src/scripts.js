@@ -42,16 +42,29 @@ function processUserForms() {
   
   $('.form--submit').on('click', function() {
     $('.splash').hide();
-    $('.hide').show();
     user = new User(userRepo.returnUserData(id));
     hydration = new Hydration(hydrationRepo.returnUserData(id));
     sleep = new Sleep(sleepRepo.returnUserData(id));
     activity = new Activity(activityRepo.returnUserActivityData(id), userRepo.returnUserData(id));
-    
-  appendUser();
-  appendHydration();
-  appendSleep();
-  appendActivity();
+
+    if (role == 1) {
+      $('.coach').show();
+      $('.date').text(date)
+      appendAverageStepGoals();
+      appendUsersSleepQualityAvg();
+      appendUsersWithSleepQuality3PlusForWeek();
+      appendLongestSleeperGivenDate();
+      appendUsersAvgStairsDate();
+      appendUsersAvgStepsDate();
+      appendUsersAvgMinActiveDate();
+    } else {
+      $('.date').text(date)
+      appendUser();
+      appendHydration();
+      appendSleep();
+      appendActivity();
+      $('.athlete').show();
+    }
 
   function appendUser() {
     appendFirstName();
@@ -75,18 +88,18 @@ function processUserForms() {
   }
 
   function appendActivity() {
-   appendUserMilesWalkedDate();
-   appendUserMinActiveDate(); 
-   appendUserAvgMinActiveWeek();
-   appendWasStepGoalAchievedDate();
-   appendUserDaysStepGoalExceeded();
-   appendUserStepStreak();
-   appendUserStairClimbRecord();
-   appendUsersAvgStairsDate();
-   appendUsersAvgStepsDate();
-   appendUsersAvgMinActiveDate();
-   appendFriendsStepChallenge();
-   appendFriendsMinActiveChallenge();
+    appendUserMilesWalkedDate();
+    appendUserMinActiveDate(); 
+    appendUserAvgMinActiveWeek();
+    appendWasStepGoalAchievedDate();
+    appendUserDaysStepGoalExceeded();
+    appendUserStepStreak();
+    appendUserStairClimbRecord();
+    appendUsersAvgStairsDate();
+    appendUsersAvgStepsDate();
+    appendUsersAvgMinActiveDate();
+    appendFriendsStepChallenge();
+    appendFriendsMinActiveChallenge();
   }
 
   function appendFirstName() {
@@ -141,7 +154,6 @@ function processUserForms() {
 
   function appendLongestSleeperGivenDate() {
     $('.user--sleptMostHoursDate').text(sleepRepo.returnLongestSleeperGivenDate(date));
-    $('.date').text(date);
   }
 
   function appendUserMilesWalkedDate() {
