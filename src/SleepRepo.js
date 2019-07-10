@@ -2,7 +2,6 @@ class SleepRepo {
   constructor(userData, userRepo) {
     this.userData = userData;
     this.userRepo = userRepo;
-    // console.log('userRepo', this.userRepo)
   }
 
   returnUserData(id) {

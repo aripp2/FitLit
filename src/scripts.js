@@ -1,14 +1,53 @@
 $(document).ready(function() {
-  const id = 22;
+  let role;
+  let coach;
+  let id;
+  let user, hydration, sleep, activity;
   const date = "2019/06/23";
   const userRepo = new UserRepo(userData);
-  const user = new User(userRepo.returnUserData(id));
   const hydrationRepo = new HydrationRepo(hydrationData);
-  const hydration = new Hydration(hydrationRepo.returnUserData(id));
-  const sleepRepo = new SleepRepo(sleepData, userData);
-  const sleep = new Sleep(sleepRepo.returnUserData(id));
-  const activityRepo = new ActivityRepo(activityData, userData);
-  const activity = new Activity(activityRepo.returnUserActivityData(id), user);
+  const sleepRepo = new SleepRepo(sleepData, userRepo);
+  //const activityRepo = new ActivityRepo(activityData, userData);
+
+  $('.form--coachName').hide();
+  $('.form--athleteName').hide();
+  $('.hide').hide();
+  $('.form--role').on('change', function() {
+    role = $('.form--role option:selected').val();
+    processUserForms();
+  });
+
+function processUserForms() {
+    if (role == 1) {
+      $('.form--athleteName').hide();
+      $('.form--coachName').show();
+    }
+    if (role == 2) {
+      $('.form--coachName').hide();
+      $('.form--athleteName').show();
+      userRepo.userData.forEach(user => {
+        $('.form--athleteNameSelector').append(`<option value="${user.id}"> ${user.name}</option>`);
+      })
+    }
+  }
+  
+  $('.form--coachName').on('change', function() {
+    coach = $('.form--coachName option:selected').val();
+  })
+  
+  $('.form--athleteName').on('change', function () {
+    let num = $('.form--athleteName option:selected').val();
+    id = parseInt(num)
+  })
+  
+  $('.form--submit').on('click', function() {
+    $('.splash').hide();
+    $('.hide').show();
+    user = new User(userRepo.returnUserData(id));
+    hydration = new Hydration(hydrationRepo.returnUserData(id));
+    sleep = new Sleep(sleepRepo.returnUserData(id));
+//   activity = new Activity(activityRepo.returnUserActivityData(id), user);
+    
   appendUser();
   appendHydration();
   appendSleep();
@@ -33,7 +72,7 @@ $(document).ready(function() {
     appendUserAllTimeSleepTotal();
     appendUsersSleepQualityAvg();
     appendUsersWithSleepQuality3PlusForWeek();
-    appendLongestSleeperGivenDate();
+    // appendLongestSleeperGivenDate();
   }
 
   function appendActivity() {
@@ -92,6 +131,7 @@ $(document).ready(function() {
 
   function appendLongestSleeperGivenDate() {
     $('.user--sleptMostHoursDate').text(sleepRepo.returnLongestSleeperGivenDate(date));
+    $('.date').text(date);
   }
 
 
@@ -204,3 +244,5 @@ const weeklySleepQualityChart = new Chart($('#chart--weekSleepQuality'), {
         }
     })
 });
+
+}); //DOC.ready closing line
