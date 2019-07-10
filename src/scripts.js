@@ -6,8 +6,8 @@ $(document).ready(function() {
   const date = "2019/06/23";
   const userRepo = new UserRepo(userData);
   const hydrationRepo = new HydrationRepo(hydrationData);
-  const sleepRepo = new SleepRepo(sleepData, userRepo);
-  //const activityRepo = new ActivityRepo(activityData, userData);
+  const sleepRepo = new SleepRepo(sleepData, userData);
+  const activityRepo = new ActivityRepo(activityData, userData);
 
   $('.form--coachName').hide();
   $('.form--athleteName').hide();
@@ -46,7 +46,7 @@ function processUserForms() {
     user = new User(userRepo.returnUserData(id));
     hydration = new Hydration(hydrationRepo.returnUserData(id));
     sleep = new Sleep(sleepRepo.returnUserData(id));
-//   activity = new Activity(activityRepo.returnUserActivityData(id), user);
+    activity = new Activity(activityRepo.returnUserActivityData(id), user);
     
   appendUser();
   appendHydration();
@@ -71,11 +71,19 @@ function processUserForms() {
     appendUserAllTimeSleepTotal();
     appendUsersSleepQualityAvg();
     appendUsersWithSleepQuality3PlusForWeek();
-    // appendLongestSleeperGivenDate();
+    appendLongestSleeperGivenDate();
   }
 
   function appendActivity() {
-
+   appendUserMilesWalkedDate();
+   appendUserMinActiveDate(); 
+   appendUserAvgMinActiveWeek();
+   appendWasStepGoalAchievedDate();
+   appendUserDaysStepGoalExceeded();
+   appendUserStairClimbRecord();
+   appendUsersAvgStairsDate();
+   appendUsersAvgStepsDate();
+   appendUsersAvgMinActiveDate();
   }
 
   function appendFirstName() {
@@ -133,6 +141,41 @@ function processUserForms() {
     $('.date').text(date);
   }
 
+  function appendUserMilesWalkedDate() {
+    $('.user--milesWalkedDate').text(activity.returnMilesWalkedForDate(date));
+  }
+
+  function appendUserMinActiveDate() {
+    $('.user--minActiveDate').text(activity.returnMinutesActiveGivenDate(date));
+  }
+
+  function appendUserAvgMinActiveWeek() {
+    $('.user--avgMinActiveWeek').text(activity.returnAvgMinActiveGivenWeek(date));
+  }
+
+  function appendWasStepGoalAchievedDate() {
+    $('.user--wasStepGoalAchieved').text(activity.wasStepGoalAchieved(date));
+  }
+
+  function appendUserDaysStepGoalExceeded() {
+    $('.user--daysStepGoalExceeded').text(activity.daysStepGoalExceeded());
+  }
+
+  function appendUserStairClimbRecord() {
+    $('.user--stairClimbRecord').text(activity.stairClimbingRecord());
+  }
+
+  function appendUsersAvgStairsDate() {
+    $('.users--stairAvgDate').text(activityRepo.avgNumStairsClimbedGivenDate(date));
+  }
+
+  function appendUsersAvgStepsDate() {
+    $('.users--stepsAvgDate').text(activityRepo.avgNumStepsTakenGivenDate(date));
+  }
+
+  function appendUsersAvgMinActiveDate() {
+    $('.users--minActiveAvgDate').text(activityRepo.avgNumMinActiveGivenDate(date));
+  };
 
 
   const weeklyWaterChart = new Chart($('#chart--weekHydration'), {
