@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header></header>
-    <div>
-      <h1>Welcome!</h1>
+    <header>HEADER HERE</header>
+    <div class="splash">
+      <h1>Welcome to FitLit!</h1>
       <h2>Please select your role:</h2>
       <form class="form--role">
         <select>
@@ -46,13 +46,30 @@
     <h2 class="hide">Friends: <span class="user--friends"></span></h2>
     <h2 class="hide">All user's step goal average <span class="users--stepAverage"></span></h2>
     <h2 class="hide">Your Water Consumed Today: <span class="user--todayWater"></span></h2>
-    <figure class="test">
+    <figure class="hide chart--userHydration">
       <canvas id="chart--weekHydration" height="400px" width="400px"></canvas>
     </figure>
-    <footer></footer>
-    
+    <h2 class="hide">Average Sleep Per Day: <span class="user--avgHoursSleep"></span> hours</h2>
+    <h2 class="hide">Average Sleep Quality: <span class="user--avgSleepQuality"></span></h2>
+    <h2 class="hide">Hours Slept on <span class="date">2019/06/23</span>: <span class="user--hoursSleptForDate"> hours</span></h2>
+    <h2 class="hide">Sleep Quality on <span class="date">2019/06/23</span>: <span class="user--sleepQualityForDate"></span></h2>
+    <h2 class="hide">All-Time Sleep Total: <span class="user--allTimeSleepTotal"> hours</span></h2>
+    <figure class="hide chart--userSleepHours">
+      <canvas id="chart--weekSleepHours" height="400px" width="400px"></canvas>
+    </figure>
+    <figure class="hide chart--userSleepQuality">
+      <canvas id="chart--weekSleepQuality" height="400px" width="400px"></canvas>
+    </figure>
+    <h2 class="hide">All Athlete's Sleep Quality Average: <span class="users--sleepQualityAverage"></span></h2>
+    <h2 class="hide">All Athlete's Who Average a Sleep Quality Greater Than 3 for the Last Week: <span class="users--sleepQualityGreater3ForWeek"></span></h2>
+    <h2 class="hide"><span class="user--sleptMostHoursDate"></span> slept the most on <span class="date">2019/06/23</span></h2>
 
 
+    <!-- <figure class="chart--userSleepHours">
+      <canvas id="chart--weekSleep" height="400px" width="400px"></canvas>
+    </figure> -->
+
+    <footer>FOOTER HERE</footer>
     <script type="text/javascript" src="../data/users.js"></script>
     <script type="text/javascript" src="../data/hydration.js"></script>
     <script type="text/javascript" src="../data/sleep.js"></script>

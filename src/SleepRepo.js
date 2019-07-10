@@ -1,6 +1,7 @@
 class SleepRepo {
-  constructor(userData) {
+  constructor(userData, userRepo) {
     this.userData = userData;
+    this.userRepo = userRepo;
   }
 
   returnUserData(id) {
@@ -45,13 +46,14 @@ class SleepRepo {
   }  
 
   returnLongestSleeperGivenDate(date) {
-    let records = this.userData.filter(record => record.date === date)
-    return records.reduce((acc, record) => {
+    let records = this.userData.filter(record => record.date === date);
+    let winner = records.reduce((acc, record) => {
       if (record.hoursSlept > acc.hoursSlept) {
         acc = record;
       }
       return acc;
-    })
+    });
+    return this.userRepo.userData.find(user => user.id === winner.userID).name;
   }
 }
 
