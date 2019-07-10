@@ -53,7 +53,7 @@ class SleepRepo {
       }
       return acc;
     });
-    return this.userRepo.userData.find(user => user.id === winner.userID).name;
+    return this.userRepo.find(user => user.id === winner.userID).name;
   }
 }
 

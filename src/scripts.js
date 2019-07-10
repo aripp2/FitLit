@@ -7,7 +7,7 @@ $(document).ready(function() {
   const userRepo = new UserRepo(userData);
   const hydrationRepo = new HydrationRepo(hydrationData);
   const sleepRepo = new SleepRepo(sleepData, userRepo);
-  // const activityRepo = new ActivityRepo(activityData);
+  //const activityRepo = new ActivityRepo(activityData, userData);
 
   $('.form--coachName').hide();
   $('.form--athleteName').hide();
@@ -46,6 +46,8 @@ function processUserForms() {
     user = new User(userRepo.returnUserData(id));
     hydration = new Hydration(hydrationRepo.returnUserData(id));
     sleep = new Sleep(sleepRepo.returnUserData(id));
+//   activity = new Activity(activityRepo.returnUserActivityData(id), user);
+    
   appendUser();
   appendHydration();
   appendSleep();
