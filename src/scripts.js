@@ -1,9 +1,8 @@
 $(document).ready(function() {
   let role;
-  let coach;
   let id;
   let user, hydration, sleep, activity;
-  const date = "2019/06/23";
+  const date = new Date().toISOString().replace('-', '/').split('T')[0].replace('-', '/');
   const userRepo = new UserRepo(userData);
   const hydrationRepo = new HydrationRepo(hydrationData);
   const sleepRepo = new SleepRepo(sleepData, userData);
@@ -49,8 +48,8 @@ function processUserForms() {
 
     if (role == 1) {
       $('.coach').show();
-      $('.date').text(date)
-      appendAverageStepGoals();
+      $('.date').text(date);
+      $('nav').hide();
       appendUsersSleepQualityAvg();
       appendUsersWithSleepQuality3PlusForWeek();
       appendLongestSleeperGivenDate();
@@ -213,18 +212,18 @@ function processUserForms() {
                 label: 'Weekly Hydration',
                 data: hydration.returnOuncesGivenDateWeek(date),
                 backgroundColor: [
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)'
+                    'rgba(148, 152, 152, .74)',
+                    'rgba(148, 152, 152, .74)',
+                    'rgba(148, 152, 152, .74)',
+                    'rgba(148, 152, 152, .74)',
+                    'rgba(148, 152, 152, .74)',
+                    'rgba(148, 152, 152, .74)',
+                    'rgba(148, 152, 152, .74)'
                 ]
             }]
         },
         options: {
-            defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Fira Sans'",
+            defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Roboto'",
             responsive: false,
             maintainAspectRatio: true,
             aspectRatio: 2,
@@ -249,18 +248,18 @@ const weeklySleepHoursChart = new Chart($('#chart--weekSleepHours'), {
                 label: 'Weekly Sleep Hours',
                 data: sleep.returnUserSleepHoursWeek(date),
                 backgroundColor: [
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)'
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)'
                 ]
             }]
         },
         options: {
-            defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Fira Sans'",
+            defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Roboto'",
             responsive: false,
             maintainAspectRatio: true,
             aspectRatio: 2,
@@ -285,18 +284,18 @@ const weeklySleepQualityChart = new Chart($('#chart--weekSleepQuality'), {
                 label: 'Weekly Sleep Quality',
                 data: sleep.returnUserSleepQualityWeek(date),
                 backgroundColor: [
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)',
-                    'rgba(11, 204, 207, .3)'
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)',
+                  'rgba(148, 152, 152, .74)'
                 ]
             }]
         },
         options: {
-            defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Fira Sans'",
+            defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Roboto'",
             responsive: false,
             maintainAspectRatio: true,
             aspectRatio: 2,
