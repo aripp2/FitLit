@@ -29,16 +29,17 @@ class Activity {
   wasStepGoalAchieved(date) {
     let steps = this.userData.find(record => record.date === date).numSteps;
     if (steps >= this.userRepo.dailyStepGoal) {
-      return true;
+      return 'Great Job! You reached your daily step goal!!!';
     } else {
-      return false;
+      return 'You did not reach your step goal.';
     }
   }
 
   daysStepGoalExceeded() {
-    return this.userData.filter(record => {
+    let numDays = this.userData.filter(record => {
       return record.numSteps > this.userRepo.dailyStepGoal
     });
+    return numDays.length;
   }
 
   stairClimbingRecord() {

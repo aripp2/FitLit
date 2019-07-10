@@ -47,12 +47,12 @@ describe('Activity', () => {
 
   it('should tell user if they reached step goal for given day', () => {
     const wasStepGoalReached = activity.wasStepGoalAchieved("2019/06/23");
-    expect(wasStepGoalReached).to.equal(true);
+    expect(wasStepGoalReached).to.equal('Great Job! You reached your daily step goal!!!');
   });
 
   it('should return all days user exceeds their step goal', () => {
     const daysStepGoalExceeded = activity.daysStepGoalExceeded();
-    expect(daysStepGoalExceeded.length).to.equal(5);
+    expect(daysStepGoalExceeded).to.equal(5);
   });
 
   it('should return user\'s stair climbing record', () => {
