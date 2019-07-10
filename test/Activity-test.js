@@ -67,8 +67,7 @@ describe('Activity', () => {
 
   it('should return dates for increasing step streaks of more than 3 days', () => {
     const streaks = activity.returnStepStreaks();
-    console.log('streaks', streaks)
-    expect(streaks).to.equal();
+    expect(streaks).to.equal('You had a 4 day streak of increasing steps on 2019/06/15,2019/06/16,2019/06/17,2019/06/18');
   });
 })
 
