@@ -22,6 +22,7 @@
         </ul>
       </nav>
     </header>
+    <div class="space"></div>
     <div class="splash">
       <h1>Welcome to FitLit!</h1>
       <h2>Please select your role:</h2>
@@ -48,48 +49,49 @@
       <button class="form--submit" type="button">Submit</button>
     </div>
     <a name="user"></a>
-    <h2 class="hide">Welcome <span class="user--firstName"></span>!</h2>
-    <h2 class="hide">Your User ID: <span class="user--id"></span></h2>
-    <h2 class="hide">Name: <span class="user--name"></span></h2>
-    <h2 class="hide">Address: <span class="user--address"></span></h2>
-    <h2 class="hide">Email: <span class="user--email"></span></h2>
-    <h2 class="hide">Stride Length: <span class="user--strideLength"></span></h2>
-    <h2 class="hide">Daily Step Goal: <span class="user--dailyStepGoal"></span></h2>
-    <h2 class="hide">Friends: <span class="user--friends"></span></h2>
-    <h2 class="hide">All user's step goal average <span class="users--stepAverage"></span></h2>
+    <h2 class="hide athlete">Welcome <span class="user--firstName"></span>!</h2>
+    <h2 class="hide coach">Welcome Coach!</h2>
+    <h2 class="hide athlete">Your User ID: <span class="user--id"></span></h2>
+    <h2 class="hide athlete">Name: <span class="user--name"></span></h2>
+    <h2 class="hide athlete">Address: <span class="user--address"></span></h2>
+    <h2 class="hide athlete">Email: <span class="user--email"></span></h2>
+    <h2 class="hide athlete">Stride Length: <span class="user--strideLength"></span></h2>
+    <h2 class="hide athlete">Daily Step Goal: <span class="user--dailyStepGoal"></span></h2>
+    <h2 class="hide athlete">Friends: <span class="user--friends"></span></h2>
+    <h2 class="hide coach athlete">All user's step goal average <span class="users--stepAverage"></span></h2>
     <a name="hydration"></a>
-    <h2 class="hide">Your Water Consumed Today: <span class="user--todayWater"></span></h2>
-    <figure class="hide chart--userHydration">
+    <h2 class="hide athlete">Your Water Consumed Today: <span class="user--todayWater"></span></h2>
+    <figure class="hide athlete chart--userHydration">
       <canvas id="chart--weekHydration" height="400px" width="400px"></canvas>
     </figure>
     <a name="sleep"></a>
-    <h2 class="hide">Average Sleep Per Day: <span class="user--avgHoursSleep"></span> hours</h2>
-    <h2 class="hide">Average Sleep Quality: <span class="user--avgSleepQuality"></span></h2>
-    <h2 class="hide">Hours Slept on <span class="date">2019/06/23</span>: <span class="user--hoursSleptForDate"> hours</span></h2>
-    <h2 class="hide">Sleep Quality on <span class="date">2019/06/23</span>: <span class="user--sleepQualityForDate"></span></h2>
-    <h2 class="hide">All-Time Sleep Total: <span class="user--allTimeSleepTotal"> hours</span></h2>
-    <figure class="hide chart--userSleepHours">
+    <h2 class="hide athlete">Average Sleep Per Day: <span class="user--avgHoursSleep"></span> hours</h2>
+    <h2 class="hide athlete">Average Sleep Quality: <span class="user--avgSleepQuality"></span></h2>
+    <h2 class="hide athlete">Hours Slept on <span class="date"></span>: <span class="user--hoursSleptForDate"> hours</span></h2>
+    <h2 class="hide athlete">Sleep Quality on <span class="date"></span>: <span class="user--sleepQualityForDate"></span></h2>
+    <h2 class="hide athlete">All-Time Sleep Total: <span class="user--allTimeSleepTotal"> hours</span></h2>
+    <figure class="hide athlete chart--userSleepHours">
       <canvas id="chart--weekSleepHours" height="400px" width="400px"></canvas>
     </figure>
-    <figure class="hide chart--userSleepQuality">
+    <figure class="hide athlete chart--userSleepQuality">
       <canvas id="chart--weekSleepQuality" height="400px" width="400px"></canvas>
     </figure>
-    <h2 class="hide">All Athlete's Sleep Quality Average: <span class="users--sleepQualityAverage"></span></h2>
-    <h2 class="hide">All Athlete's Who Average a Sleep Quality Greater Than 3 for the Last Week: <span class="users--sleepQualityGreater3ForWeek"></span></h2>
-    <h2 class="hide"><span class="user--sleptMostHoursDate"></span> slept the most on <span class="date">2019/06/23</span></h2>
+    <h2 class="hide coach athlete">All Athlete's Sleep Quality Average: <span class="users--sleepQualityAverage"></span></h2>
+    <h2 class="hide coach">All Athlete's Who Average a Sleep Quality Greater Than 3 for the Last Week: <span class="users--sleepQualityGreater3ForWeek"></span></h2>
+    <h2 class="hide coach"><span class="user--sleptMostHoursDate"></span> slept the most on <span class="date"></span></h2>
     <a name="activity"></a>
-    <h2 class="hide">Miles Walked on <span class="date">2019/06/23</span> <span class="user--milesWalkedDate"></span></h2>
-    <h2 class="hide">Minutes Active on <span class="date">2019/06/23</span> <span class="user--minActiveDate"></span></h2>
-    <h2 class="hide">Average Minutes Active for the Week of <span class="week">week?</span> <span class="user--avgMinActiveWeek"></span></h2>
-    <h2 class="hide user--wasStepGoalAchieved"></h2>
-    <h2 class="hide">Days Step Goal Was Exceeded: <span class="user--daysStepGoalExceeded"></span></h2>
-    <h2 class="hide user--stepStreak"></h2>
-    <h2 class="hide">Your Stair Climbing Record is <span class="user--stairClimbRecord"></span> Steps in a Day!</h2>
-    <h2 class="hide">Friends Weekly Step Challenge Winner: <span class="user--friendsStepChallenge"></span></h2>
-    <h2 class="hide">Friends Weekly Minutes Active Challenge Winner: <span class="user--friendsMinActiveChallenge"></span></h2>
-    <h2 class="hide">Average Stairs Climbed for All Athletes on <span class="date">2019/06/23</span>: <span class="users--stairAvgDate"></span></h2>
-    <h2 class="hide">Average Steps Taken for All Athletes on <span class="date">2019/06/23</span>: <span class="users--stepsAvgDate"></span></h2>
-    <h2 class="hide">Average Minutes for All Athletes on <span class="date">2019/06/23</span>: <span class="users--minActiveAvgDate"></span></h2>
+    <h2 class="hide athlete">Miles Walked on <span class="date"></span> <span class="user--milesWalkedDate"></span></h2>
+    <h2 class="hide athlete">Minutes Active on <span class="date"></span> <span class="user--minActiveDate"></span></h2>
+    <h2 class="hide athlete">Average Minutes Active for the Week of <span class="week">week?</span> <span class="user--avgMinActiveWeek"></span></h2>
+    <h2 class="hide athlete user--wasStepGoalAchieved"></h2>
+    <h2 class="hide athlete">Days Step Goal Was Exceeded: <span class="user--daysStepGoalExceeded"></span></h2>
+    <h2 class="hide athlete user--stepStreak"></h2>
+    <h2 class="hide athlete">Your Stair Climbing Record is <span class="user--stairClimbRecord"></span> Steps in a Day!</h2>
+    <h2 class="hide athlete">Friends Weekly Step Challenge Winner: <span class="user--friendsStepChallenge"></span></h2>
+    <h2 class="hide athlete">Friends Weekly Minutes Active Challenge Winner: <span class="user--friendsMinActiveChallenge"></span></h2>
+    <h2 class="hide coach athlete">Average Stairs Climbed for All Athletes on <span class="date"></span>: <span class="users--stairAvgDate"></span></h2>
+    <h2 class="hide coach athlete">Average Steps Taken for All Athletes on <span class="date"></span>: <span class="users--stepsAvgDate"></span></h2>
+    <h2 class="hide coach athlete">Average Minutes for All Athletes on <span class="date"></span>: <span class="users--minActiveAvgDate"></span></h2>
 
     <footer>FOOTER HERE</footer>
     <script type="text/javascript" src="../data/users.js"></script>

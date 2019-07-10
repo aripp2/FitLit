@@ -36,9 +36,14 @@ ul {
   list-style: none;
 }
 
+.space {
+  height: 250px;
+}
+
 .splash {
   margin: 200px auto;
   border: 2px solid black;
+  height: 400px;
   text-align: center;
   width: 30%;
 }
