@@ -1,26 +1,39 @@
-# FitLit Starter Kit
+# FitLit
 
-The details of this project are outline in [this project spec](http://frontend.turing.io/projects/fitlit.html).
+By [Amy Rippeto](https://github.com/aripp2) and [Katherine Williams](https://github.com/kawilliams8)
 
-## Setup
+## Description
 
-1. Within your group, decide on one person to have the project repository (repo) on their GitHub account. Then, that person should fork this repo - on the top right corner of this page, click the **Fork** button.
-1. Both memebers of the group should clone down the _forked_ repo. Since you don't want to name your project "activity-tracker-starter", you can use an optional argument when you run git clone (you replace the [...] with the terminal command arguments): `git clone [remote-address] [what you want to name the repo]`
-1. Once you have cloned the repo, change into the directory and install the project dependencies. Run `npm install` to install project dependencies.
-1. Run `open src/index.html` in the terminal to see the HTML page (you should see some boilerplate HTML displayed on the page)
-1. Make sure both members of your team are collaborators on the forked repo.
+FitLit is a web-based data visualization app designed to analyze and display a user's fitness and activity history in a useful and engaging format. We were challenged to manipulate multiple local datasets and create an attractive display from scratch. With the principles of OOP and TDD in mind, we designed a thoughtful class structure, created sample datasets, implemented a full Mocha/Chai testing suite, and kept tidy code using eslint. We opted to track project goals and iterations with Trello.
 
-## Testing
+All data charts were created with [Chart.js](https://www.chartjs.org/), HTML5 and JavaScript.
 
-There is no boilerplate for testing in this starter-kit repo. You will need to set this up yourself. However, if you ran `npm install`, then the tooling you need to start testing is already installed (`mocha` and `chai`).
+Fit Lit is a Front-End MOD 2 project at the Turing School of Software & Design.
 
-## Linting Your Code
+## Splashscreen User Selection
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/1.png)
+## Coach Role / Coach Names
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/2.png)
+## Coach Dashboard
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/3.png)
+## Athlete Role / Athlete Names
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/4.png)
+## Athlete Dashboard
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/5.png)
+## Athlete Data Visualization
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/6.png)
 
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit, but that's ok - the linter is still running successfully.
+## Installation
 
-Your linter will look only at the JavaScript files you have within the `src` and the `test` directories.
+To view FitLit in action:
+
+1. Clone down the Repo
+2. Run `npm install` in your terminal
+3. Open the index.html file in a browser
 
 ## Data Model
+
+Students were provided four data files for FitLit.
 
 **Users**
 
