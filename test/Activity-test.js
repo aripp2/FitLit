@@ -11,7 +11,6 @@ const UserRepo = require('../src/UserRepo');
 const sampleData = require('../data/sample-users');
 const sampleUserData = sampleData.sampleUserData;
 
-
 describe('Activity', () => {
 
   let userRepo, user, activityRepo, userActivity, activity;

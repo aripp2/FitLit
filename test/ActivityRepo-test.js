@@ -59,7 +59,6 @@ describe('ActivityRepo', () => {
 
   it('should declare the friends step challenge winner\'s name', () => {
     const winner = activityRepo.returnFriendsWeeklyStepWinner("2019/06/23", user);
-    // console.log('name', name)
     expect(winner).to.equal('Jarvis Considine with 46000 steps!');
   });
 
