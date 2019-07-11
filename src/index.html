@@ -53,47 +53,49 @@
     <h2 class="hide coach welcome">Welcome Coach!</h2>
     <h2 class="hide coach athlete">Today's Date: <span class="date"></span></h2>
     <h2 class="hide athlete">User Data:</h2>
-    <h3 class="hide athlete">Your User ID: <span class="user--id"></span></h3>
-    <h3 class="hide athlete">Name: <span class="user--name"></span></h3>
-    <h3 class="hide athlete">Address: <span class="user--address"></span></h3>
-    <h3 class="hide athlete">Email: <span class="user--email"></span></h3>
-    <h3 class="hide athlete">Stride Length: <span class="user--strideLength"></span></h3>
-    <h3 class="hide athlete">Daily Step Goal: <span class="user--dailyStepGoal"></span></h3>
-    <h3 class="hide athlete">Friends: <span class="user--friends"></span></h3>
-    <h3 class="hide athlete">All user's step goal average: <span class="users--stepAverage"></span></h3>
-    <h2 class="hide athlete">Hydration Data:</h2>
+    <section class="hide athlete grey profile">
+      <h3 class="hide athlete">Your User ID: <span class="    user--id"></span></h3>
+      <h3 class="hide athlete">Name: <span class="user--name">    </span></h3>
+      <h3 class="hide athlete">Address: <span class=" user--address"></span></h3>
+      <h3 class="hide athlete">Email: <span class="user--email"   ></span></h3>
+      <h3 class="hide athlete">Stride Length: <span class="   user--strideLength"></span></h3>
+      <h3 class="hide athlete">Daily Step Goal: <span class=" user--dailyStepGoal"></span></h3>
+      <h3 class="hide athlete">All user's step goal average: <span class="users--stepAverage"></span></h3>
+      <h3 class="hide athlete">Friends: <span class=" user--friends"></span></h3>
+    </section>
     <a name="hydration"></a>
-    <h3 class="hide athlete">Your Water Consumed Today: <span class="user--todayWater"></span></h3>
+    <h2 class="hide athlete">Hydration Data:</h2>
+    <h3 class="hide athlete pink">Your Water Consumed Today: <span class="user--todayWater"></span> oz.</h3>
     <figure class="hide athlete chart--userHydration">
       <canvas id="chart--weekHydration" height="400px" width="400px"></canvas>
     </figure>
-    <h2 class="hide athlete coach">Sleep Data:</h2>
     <a name="sleep"></a>
-    <h3 class="hide athlete">Average Sleep Per Day: <span class="user--avgHoursSleep"></span> hours</h3>
-    <h3 class="hide athlete">Average Sleep Quality: <span class="user--avgSleepQuality"></span></h3>
-    <h3 class="hide athlete">Hours Slept on <span class="date"></span>: <span class="user--hoursSleptForDate"> hours</span></h3>
-    <h3 class="hide athlete">Sleep Quality on <span class="date"></span>: <span class="user--sleepQualityForDate"></span></h3>
-    <h3 class="hide athlete">All-Time Sleep Total: <span class="user--allTimeSleepTotal"> hours</span></h3>
-    <figure class="hide athlete chart--userSleepHours">
+    <h2 class="hide athlete coach">Sleep Data:</h2>
+    <h3 class="hide athlete pink">Average Sleep Per Day: <span class="user--avgHoursSleep"></span> hours</h3>
+    <h3 class="hide athlete pink">Average Sleep Quality: <span class="user--avgSleepQuality"></span></h3>
+    <h3 class="hide athlete pink">Hours Slept Last Night: <span class="user--hoursSleptForDate"> hours</span></h3>
+    <h3 class="hide athlete pink">Sleep Quality Last Night: <span class="user--sleepQualityForDate"></span></h3>
+    <h3 class="hide athlete pink">All-Time Sleep Total: <span class="user--allTimeSleepTotal"> hours</span></h3>
+    <figure class="hide athlete sleepCharts chart--userSleepHours">
       <canvas id="chart--weekSleepHours" height="400px" width="400px"></canvas>
     </figure>
-    <figure class="hide athlete chart--userSleepQuality">
+    <figure class="hide athlete sleepCharts chart--userSleepQuality">
       <canvas id="chart--weekSleepQuality" height="400px" width="400px"></canvas>
     </figure>
     <h3 class="hide coach grey athlete">Athletes Sleep Quality Average: <span class="users--sleepQualityAverage"></span></h3>
     <h3 class="hide coach grey">Athletes Who Average a Sleep Quality Greater Than 3 for the Last Week: <span class="users--sleepQualityGreater3ForWeek"></span></h3>
     <h3 class="hide coach grey"><span class="user--sleptMostHoursDate"></span> slept the most hours last night.</span></h3>
-    <h2 class="hide athlete coach">Activity Data:</h2>
     <a name="activity"></a>
-    <h3 class="hide athlete">Miles Walked on <span class="date"></span> <span class="user--milesWalkedDate"></span></h3>
-    <h3 class="hide athlete">Minutes Active on <span class="date"></span> <span class="user--minActiveDate"></span></h3>
-    <h3 class="hide athlete">Average Minutes Active for the Week of <span class="week">week?</span> <span class="user--avgMinActiveWeek"></span></h3>
-    <h3 class="hide athlete user--wasStepGoalAchieved"></h3>
-    <h3 class="hide athlete">Days Step Goal Was Exceeded: <span class="user--daysStepGoalExceeded"></span></h3>
-    <h3 class="hide athlete user--stepStreak"></h2>
-    <h3 class="hide athlete">Your Stair Climbing Record is <span class="user--stairClimbRecord"></span> Steps in a Day!</h3>
-    <h3 class="hide athlete">Friends Weekly Step Challenge Winner: <span class="user--friendsStepChallenge"></span></h3>
-    <h3 class="hide athlete">Friends Weekly Minutes Active Challenge Winner: <span class="user--friendsMinActiveChallenge"></span></h3>
+    <h2 class="hide athlete coach">Activity Data:</h2>
+    <h3 class="hide athlete pink">Miles Walked Today: <span class="user--milesWalkedDate"></span></h3>
+    <h3 class="hide athlete pink">Minutes Active Today: <span class="user--minActiveDate"></span></h3>
+    <h3 class="hide athlete pink">Average Minutes Active for the Last Week: <span class="user--avgMinActiveWeek"></span></h3>
+    <h3 class="hide athlete grey user--wasStepGoalAchieved"></h3>
+    <h3 class="hide athlete grey">Days Step Goal Was Exceeded: <span class="user--daysStepGoalExceeded"></span></h3>
+    <h3 class="hide athlete grey user--stepStreak"></h2>
+    <h3 class="hide athlete pink">Your Stair Climbing Record is <span class="user--stairClimbRecord"></span> Steps in a Day!</h3>
+    <h3 class="hide athlete pink">Friends Weekly Step Challenge Winner: <span class="user--friendsStepChallenge"></span></h3>
+    <h3 class="hide athlete pink">Friends Weekly Minutes Active Challenge Winner: <span class="user--friendsMinActiveChallenge"></span></h3>
     <h3 class="hide coach grey athlete">Average Stairs Climbed for All Athletes Today: <span class="users--stairAvgDate"></span></h3>
     <h3 class="hide coach grey athlete">Average Steps Taken for All Athletes Today: <span class="users--stepsAvgDate"></span></h3>
     <h3 class="hide coach grey athlete">Average Minutes for All Athletes Today: <span class="users--minActiveAvgDate"></span></h3>
