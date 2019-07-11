@@ -2,8 +2,6 @@ class ActivityRepo {
   constructor(userData, userRepo) {
     this.userData = userData;
     this.userRepo = userRepo;
-    // console.log('userData', this.userData)
-    // console.log('userRepo', this.userRepo)
   }
 
   returnUserActivityData(id) {

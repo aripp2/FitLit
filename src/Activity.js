@@ -63,9 +63,9 @@ class Activity {
     let streaks = this.userData.reduce((acc, record, index, array) => {
       if (streak.length === 0) {
         streak.push(record.date);
-      } else if (index > 0 && record.numSteps > array[index -1].numSteps) {
+      } else if (index > 0 && record.numSteps > array[index - 1].numSteps) {
         streak.push(record.date);
-      } else if (index > 0 && record.numSteps <= array[index -1].numSteps && streak.length > 2) {
+      } else if (index > 0 && record.numSteps <= array[index - 1].numSteps && streak.length > 2) {
         acc.push(streak);
         streak = [];
       } else {
