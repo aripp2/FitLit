@@ -1,8 +1,14 @@
+**Splashscreen User Selection**
 ![Screenshot](https://github.com/aripp2/FitLit/blob/master/1.png)
+**Coach Role / Coach Names**
 ![Screenshot](https://github.com/aripp2/FitLit/blob/master/2.png)
+**Coach Dashboard**
 ![Screenshot](https://github.com/aripp2/FitLit/blob/master/3.png)
+**Athlete Role / Athlete Names**
 ![Screenshot](https://github.com/aripp2/FitLit/blob/master/4.png)
+**Athlete Dashboard**
 ![Screenshot](https://github.com/aripp2/FitLit/blob/master/5.png)
+**Athlete Data Visualization**
 ![Screenshot](https://github.com/aripp2/FitLit/blob/master/6.png)
 
 # FitLit Starter Kit
