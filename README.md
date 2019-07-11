@@ -1,12 +1,12 @@
 # FitLit
 
-goals, installation, chart.js
-
 By [Amy Rippeto](https://github.com/aripp2) and [Katherine Williams](https://github.com/kawilliams8)
 
 ## Description
 
 FitLit is a web-based data visualization app designed to analyze and display a user's fitness and activity history in a useful and engaging format. We were challenged to manipulate multiple local datasets and create an attractive display from scratch. With the principles of OOP and TDD in mind, we designed a thoughtful class structure, created sample datasets, implemented a full Mocha/Chai testing suite, and kept tidy code using eslint. We opted to track project goals and iterations with Trello.
+
+All data charts were created with [Chart.js](https://www.chartjs.org/), HTML5 and JavaScript.
 
 Fit Lit is a Front-End MOD 2 project at the Turing School of Software & Design.
 
