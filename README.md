@@ -1,3 +1,10 @@
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/1.png)
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/2.png)
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/3.png)
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/4.png)
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/5.png)
+![Screenshot](https://github.com/aripp2/FitLit/blob/master/6.png)
+
 # FitLit Starter Kit
 
 The details of this project are outline in [this project spec](http://frontend.turing.io/projects/fitlit.html).
